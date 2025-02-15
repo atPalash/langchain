@@ -3,6 +3,11 @@ from langchain import hub
 from langchain_openai import ChatOpenAI
 from langchain.agents import create_react_agent, AgentExecutor
 from langchain_experimental.tools import PythonREPLTool
+from langchain_experimental.agents import (
+    create_csv_agent,
+    create_pandas_dataframe_agent,
+)
+import pandas
 
 load_dotenv()
 
@@ -10,7 +15,7 @@ load_dotenv()
 def main():
     print("hello")
 
-    instructions = "You are an agent to generate random number from 1 to 100"
+    instructions = "You are an agent to generate rnadom number from 1 to 100"
     base_prompt = hub.pull("langchain-ai/react-agent-template")
     prompt = base_prompt.partial(instructions=instructions)
 
