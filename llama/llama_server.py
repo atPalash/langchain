@@ -13,6 +13,7 @@ class ChatOllama:
             "model": self.model,
             "prompt": input_text,
             "temperature": self.temperature,
+            "stream": False,
             # Add any other necessary parameters here
         }
 
@@ -29,7 +30,7 @@ class ChatOllama:
 
 # Set up the ChatOllama instance with the server URL
 llama_model = ChatOllama(
-    server_url="http://192.168.0.31:11434/api/generate"
+    server_url="https://alert-fly-enabled.ngrok-free.app/api/generate"
 )  # Replace '/endpoint' with the correct path
 
 # Example usage
