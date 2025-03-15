@@ -15,6 +15,7 @@ tabulate = "*"
 langchain-anthropic = "*"
 langchain-ollama = "*"
 ollama = "*"
+langchain-community = "*"
 
 [dev-packages]
 
